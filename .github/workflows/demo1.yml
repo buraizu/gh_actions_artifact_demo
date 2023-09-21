@@ -1,5 +1,5 @@
 name: Artifact demo
-on: ...
+on: push
 jobs:
   test:
     runs-on: ubuntu-latest
