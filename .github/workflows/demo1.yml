@@ -10,7 +10,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: ~/.npm
-          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
+          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}  # Combines and hashes package-lock.json files, so that if dependencies are updated they will be re-downloaded instead of pulled from cache
       - name: Install dependencies
         run: npm ci
       - name: Test code
